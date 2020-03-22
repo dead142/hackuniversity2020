@@ -69,7 +69,7 @@ class SiteController extends Controller
     public function actionApi(){
 
         $client = \Yii::$app->clickhouse;
-        $sql = 'select * from data';
+        $sql = 'select * from data order by EventTime desc limit 25';
         $data = $client->createCommand($sql )->queryAll();
 
         $dt['Pressure'] = ArrayHelper::getColumn($data,'Pressure');
