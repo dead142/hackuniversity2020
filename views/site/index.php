@@ -4,10 +4,6 @@
 /* @var $this yii\web\View */
 
 $this->title = 'My Yii Application';
-$client      = \Yii::$app->clickhouse;
-$sql         = 'select * from data';
-$data        = [];//$client->createCommand($sql)->queryAll();
-$url         = \yii\helpers\Url::to( [ 'site/api' ] );
 
 
 $script = <<< JS
