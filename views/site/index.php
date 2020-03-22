@@ -4,6 +4,7 @@
 /* @var $this yii\web\View */
 
 $this->title = 'My Yii Application';
+ $url         = \yii\helpers\Url::to( [ 'site/api' ] );
 
 
 $script = <<< JS
